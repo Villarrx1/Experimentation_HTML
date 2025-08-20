@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Collapsible Sections</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .collapsible {
+            background-color: #f1f1f1;
+            color: #333;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 10px 20px;
+            display: none;
+            border-left: 2px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Skills Overview</h2>
+
+    <!-- Section 1: By Skill -->
+    <button class="collapsible">▶ By Skill</button>
+    <div class="content">
+
+        <!-- Section 2: Communication Skills -->
+        <button class="collapsible">▶ Communication Skills</button>
+        <div class="content">
+            <ul>
+                <li>Business Writing: Email Correspondence V2</li>
+                <li>Email and Business Correspondence</li>
+                <li>Professional Language Enrichment for ONEREPH</li>
+            </ul>
+        </div>
+
+        <!-- Section 2: Customer Service -->
+        <button class="collapsible">▶ Customer Service & Sales</button>
+        <div class="content">
+            <ul>
+                <li>Customer Engagement</li>
+                <li>Sales 101: A Beginner's Guide to Sales</li>
+            </ul>
+        </div>
+
+              <!-- Section 3: Emotional & Cognitive Skills -->
+        <button class="collapsible">▶ Emotional & Cognitive Skills</button>
+        <div class="content">
+            <ul>
+                <li>Emotional Intelligence</li>
+                <li>Growth Mindset</li>
+            </ul>
+        </div>
+
+               <!-- Section 4: Productivity & Time Management -->
+        <button class="collapsible">▶ Productivity & Time Management</button>
+        <div class="content">
+            <ul>
+                <li>Time Management</li>
+            </ul>
+        </div>
+
+            <!-- Section 5: AI -->
+        <button class="collapsible">▶ AI</button>
+        <div class="content">
+            <ul>
+                <li>Prompt Engineering Workshop</li>
+            </ul>
+        </div>
+    </div>
+
+
+ <!-- Section 1: By Div -->
+    <button class="collapsible">▶ By Division</button>
+    <div class="content">
+
+        <!-- Section 2: Communication Skills -->
+        <button class="collapsible">▶ Sales</button>
+        <div class="content">
+            <ul>
+                <li>Business Writing: Email Correspondence V2</li>
+                <li>Customer Engagement</li>
+                <li>Professional Language Enrichment for ONEREPH</li>
+                <li>Sales 101: A Beginner's Guide to Sales</li>
+            </ul>
+        </div>
+
+        <!-- Section 2: Customer Service -->
+        <button class="collapsible">▶ GOTQ</button>
+        <div class="content">
+            <ul>
+                <li>Culture Awareness Training: PH</li>
+                <li>Culture Awareness Training: UK</li>
+                <li>Culture Overview Training (US-FR-UK-DE-IN-ANZ)</li>
+                <li>Email and Business Correspondence</li>
+                <li>Emotional Intelligence</li>
+                <li>Growth Mindset</li>
+                <li>Time Management</li>                       
+            </ul>
+        </div>
+
+              <!-- Section 3: Emotional & Cognitive Skills -->
+        <button class="collapsible">▶ OPEX</button>
+        <div class="content">
+            <ul>
+                <li>Prompt Engineering Workshop</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        const collapsibles = document.querySelectorAll(".collapsible");
+        collapsibles.forEach(btn => {
+            btn.addEventListener("click", function () {
+                this.classList.toggle("active");
+                const content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                    this.textContent = this.textContent.replace("▼", "▶");
+                } else {
+                    content.style.display = "block";
+                    this.textContent = this.textContent.replace("▶", "▼");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
